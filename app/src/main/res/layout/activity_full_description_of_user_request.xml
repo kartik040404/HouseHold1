@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fullDescriptionOfUserRequest"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/track"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center_horizontal|center_vertical"
+        android:visibility="gone">
+
+
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="228dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/btn_bg"
+            android:text="Service Provider Placed"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"/>
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="228dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="50dp"
+            android:textStyle="bold"
+            android:background="@drawable/btn_bg"
+            android:text="Service Provider Confirmed"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_marginTop="50dp"
+            android:layout_width="228dp"
+            android:layout_height="53dp"
+            android:background="@drawable/btn_bg"
+            android:textStyle="bold"
+            android:text="Service Provider at Doorstep"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-condensed"            android:textAllCaps="false"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="228dp"
+            android:layout_height="53dp"
+            android:background="@drawable/btn_bg"
+            android:textStyle="bold"
+            android:text="Service Provider at Doorstep"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-condensed"            android:textAllCaps="false"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nouser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="No users"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="300dp"
+            >
+
+        </TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black">
+
+    </TextView>
+
+
+
+        <EditText
+            android:background="@drawable/border"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:id="@+id/address"
+            android:layout_width="307dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:layout_gravity="center"
+            android:enabled="false">
+
+        </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Problem"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black">
+
+    </TextView>
+
+    <EditText
+        android:background="@drawable/border"
+        android:padding="10dp"
+        android:textColor="@color/black"
+
+        android:id="@+id/problem"
+        android:layout_width="307dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:layout_gravity="center"
+        android:enabled="false">
+
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone No"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black">
+
+    </TextView>
+
+    <EditText
+        android:background="@drawable/border"
+        android:padding="10dp"
+        android:textColor="@color/black"
+
+        android:id="@+id/phone"
+        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:layout_gravity="center"
+        android:enabled="false">
+
+    </EditText>
+<Button
+    android:id="@+id/approve"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_gravity="center"
+    android:text="Approve">
+
+</Button>
+
+    </LinearLayout>
+</LinearLayout>

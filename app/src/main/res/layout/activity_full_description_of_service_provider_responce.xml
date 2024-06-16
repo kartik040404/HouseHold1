@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fullDescriptionOfServiceProviderResponce"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/usert"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:id="@+id/layoutToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/track_order"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/drop_shadow"
+            app:layout_constraintTop_toBottomOf="@id/layoutToolbar" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#99F2F2F2"
+            app:layout_constraintBottom_toBottomOf="@id/viewDivider"
+            app:layout_constraintTop_toBottomOf="@id/layoutToolbar" />
+
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#E9E9E9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.101" />
+        <View
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:id="@+id/viewOrderplace"
+            android:layout_marginStart="30dp"
+            app:layout_constraintBottom_toBottomOf="@id/imgordplc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imgordplc"
+            android:background="@drawable/shape_status_complete"/>
+        <ImageView
+            android:id="@+id/imgordplc"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/serviceproviderplaced"
+            app:layout_constraintTop_toBottomOf="@id/viewDivider"
+            app:layout_constraintStart_toEndOf="@id/viewOrderplace"
+            android:contentDescription="@string/app_name"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"/>
+        <View
+            android:id="@+id/viewplacedsupporter"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="@id/imgordplc"
+            app:layout_constraintEnd_toEndOf="@id/imgordplc"
+            app:layout_constraintTop_toTopOf="@id/imgordplc"
+            app:layout_constraintBottom_toBottomOf="@id/imgordplc"/>
+
+        <TextView
+            android:id="@+id/txtorderplace"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/imgordplc"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Service provider placed"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toTopOf="@id/viewplacedsupporter"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="We have received your order"
+            app:layout_constraintStart_toStartOf="@id/txtorderplace"
+            app:layout_constraintEnd_toEndOf="@id/txtorderplace"
+            app:layout_constraintTop_toBottomOf="@id/viewplacedsupporter"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="15sp"/>
+        <View
+            android:id="@+id/vieworderconf"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/shape_status_remaining"
+            app:layout_constraintTop_toTopOf="@id/imgordconfred"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/imgordconfred"/>
+
+        <ImageView
+            android:id="@+id/imgordconfred"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/spconfirmed"
+            app:layout_constraintStart_toEndOf="@id/vieworderconf"
+            app:layout_constraintTop_toBottomOf="@id/imgordplc" />
+
+        <View
+            android:id="@+id/viewconfsupp"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="@id/imgordconfred"
+            app:layout_constraintEnd_toEndOf="@id/imgordconfred"
+            app:layout_constraintTop_toTopOf="@id/imgordconfred"/>
+
+
+        <TextView
+            android:id="@+id/txtorderconf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Service provider Confirmed"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/imgordconfred" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Your order has confirmed"
+            app:layout_constraintEnd_toEndOf="@id/txtorderconf"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/txtorderconf"
+            app:layout_constraintTop_toBottomOf="@id/viewconfsupp" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@id/viewOrderplace"
+            app:layout_constraintBottom_toTopOf="@id/vieworderconf"
+            app:layout_constraintStart_toStartOf="@id/viewOrderplace"
+            app:layout_constraintEnd_toEndOf="@id/viewOrderplace"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+
+        <View
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:id="@+id/viewordprocess"
+            android:background="@drawable/shape_status_remaining"
+            app:layout_constraintTop_toTopOf="@+id/imgorderprocessed"
+            app:layout_constraintBottom_toBottomOf="@+id/imgorderprocessed"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="30dp" />
+
+        <ImageView
+            android:id="@+id/imgorderprocessed"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="56dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/map"
+            app:layout_constraintStart_toEndOf="@+id/viewordprocess"
+            app:layout_constraintTop_toBottomOf="@id/imgordconfred"
+            app:layout_goneMarginStart="50dp" />
+
+        <View
+            android:id="@+id/viewprocsupporter"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            app:layout_constraintEnd_toEndOf="@+id/imgorderprocessed"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/imgorderprocessed"
+            app:layout_constraintTop_toTopOf="@+id/imgorderprocessed" />
+
+        <TextView
+            android:id="@+id/txtordprocsed"
+            android:layout_width="258dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Service provider processed"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imgorderprocessed" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="We are preparing your order "
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtordprocsed"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txtordprocsed"
+            app:layout_constraintTop_toBottomOf="@+id/viewprocsupporter" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintStart_toStartOf="@+id/vieworderconf"
+            app:layout_constraintEnd_toEndOf="@+id/vieworderconf"
+            app:layout_constraintTop_toBottomOf="@+id/vieworderconf"
+            app:layout_constraintBottom_toTopOf="@+id/viewordprocess"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+
+        <View
+            android:id="@+id/viewordready"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="30dp"
+
+            android:background="@drawable/shape_status_remaining"
+
+            app:layout_constraintBottom_toBottomOf="@+id/imgorderready"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imgorderready" />
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/imgorderready"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/door"
+            android:alpha="0.5"
+            app:layout_constraintTop_toBottomOf="@id/imgorderprocessed"
+            app:layout_constraintStart_toEndOf="@id/viewordready"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"/>
+        <View
+            android:id="@+id/viewreadysuppoter"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="@+id/imgorderready"
+            app:layout_constraintEnd_toEndOf="@+id/imgorderready"
+            app:layout_constraintBottom_toBottomOf="@+id/imgorderready"
+            app:layout_constraintTop_toTopOf="@+id/imgorderready"/>
+
+        <TextView
+            android:id="@+id/txtordready"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="8dp"
+            android:text="Service provider at door step"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/viewreadysuppoter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/imgorderready" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:text="At your door step"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/txtordready"
+            app:layout_constraintStart_toStartOf="@id/txtordready"
+            app:layout_constraintTop_toBottomOf="@id/viewreadysuppoter" />
+        <View
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/viewordprocess"
+            app:layout_constraintEnd_toEndOf="@id/viewordprocess"
+            app:layout_constraintTop_toBottomOf="@id/viewordprocess"
+            app:layout_constraintBottom_toTopOf="@id/viewordready"
+            android:background="@color/colorTextSecondary"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:alpha="0.5"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/usermain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black">
+
+    </TextView>
+
+
+    <EditText
+        android:background="@drawable/border"
+        android:padding="10dp"
+        android:textColor="@color/black"
+
+        android:id="@+id/rating"
+        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:layout_gravity="center"
+        android:enabled="false">
+
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone No"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black">
+
+    </TextView>
+
+    <EditText
+        android:background="@drawable/border"
+        android:padding="10dp"
+        android:textColor="@color/black"
+
+        android:id="@+id/phone_no"
+        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:layout_gravity="center"
+        android:enabled="false">
+
+    </EditText>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="Approve"
+        android:id="@+id/go">
+
+    </Button>
+
+    </LinearLayout>
+</LinearLayout>

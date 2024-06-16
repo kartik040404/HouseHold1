@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HouseHold</string>
+
+    <string name="track_order">Track Order</string>
+    <string name="cancel">Cancel</string>
+    <string name="order_value">C862966</string>
+</resources>
